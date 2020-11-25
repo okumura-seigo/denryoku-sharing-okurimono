@@ -33,6 +33,4 @@ if (count($errMsg) == 0) {
 	exit;
 	
 }
-?>
-
 

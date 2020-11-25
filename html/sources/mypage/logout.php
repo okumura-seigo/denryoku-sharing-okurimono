@@ -7,4 +7,3 @@ session_destroy();
 setcookie("ul", "", time() - 3600, "/", DMN_NAME);
 redirectUrl(HOME_URL."sign-in/");
 
-?>

@@ -36,7 +36,7 @@ if ($requestData['action'] == "login") {
 $errMsg = array("ログインIDもしくはメールアドレスが正しくありません");
 
 // 出力設定
-require_once 'index.php';
+require_once BOOT_PHP_DIR.'sign-in/index.php';
+require_once BOOT_HTML_DIR.'sign-in/index.html';
 exit;
 
-?>

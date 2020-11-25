@@ -1,5 +1,5 @@
 <?php
-define("DEBUG_MODE", 1);
+
 # パラメータ設定
 $arrParam = array(
 	"loginid" => "ログインID"
@@ -39,12 +39,12 @@ if (checkData($requestData['loginid'], "email")) {
 			header('Location:./mail-complete');
 			exit;
 		}	
-	}	
+	}
 }
 $errMsg = array("入力いただいたメールアドレスは登録されていません");
 
 //出力設定
-require_once 'mail.php';
+require_once BOOT_PHP_DIR.'sign-in/mail.php';
+require_once BOOT_HTML_DIR.'sign-in/mail.html';
 exit;
 
-?>

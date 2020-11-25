@@ -27,7 +27,8 @@ if (count($infoUser) != 1) {
 // エラーチェック
 $errMsg = actionValidate("forget_password_val", $requestData, $arrParam);
 if (count($errMsg) > 0) {
-	require_once 'password.php';
+	require_once BOOT_PHP_DIR.'sign-in/password.php';
+	require_once BOOT_HTML_DIR.'sign-in/password.html';
 	exit;
 }else{
 	$requestData['passwd'] = password_hash($requestData['passwd'], PASSWORD_DEFAULT);

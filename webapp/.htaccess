@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^webapp/config/.*$ - [F,L]
+RewriteRule ^webapp/cron/.*$ - [F,L]
+RewriteRule ^webapp/lib/.*$ - [F,L]
+RewriteRule ^webapp/logic/.*$ - [F,L]

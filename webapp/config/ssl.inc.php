@@ -1,0 +1,5 @@
+<?php
+
+$sslArray = array(
+);
+

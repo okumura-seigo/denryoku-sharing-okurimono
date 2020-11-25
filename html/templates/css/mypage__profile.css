@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+.c-form2__button_submit{
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 40px;   /* 余白       */
+  background    : #689F38;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : none;    /* 枠の指定 */
+  margin:  0 auto;
+}
+
+a.c-form2__password_link{
+  position: relative;
+  display: inline-block;
+  padding: 0.8em 0;
+  padding-left: 20px;
+  color: #5bc0de;
+}
+
+.c-form2__password_link::before{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: '';
+ 
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-top: solid 2px #5bc0de;
+  border-right: solid 2px #5bc0de;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: -2px;
+  margin-left: 5px;
+}
+
+.c-form2__hw{
+  line-height: 1.6em;
+  padding-left: 0.5em;
+  margin-bottom: 1em;
+  color: rgb(0, 0, 0);
+  border-left: 6px solid rgb(0, 0, 0);
+}
+
+.c-form2 label{
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.c-form2__label_name{
+  display: inline-block;
+  width: 2em;
+  padding: 0.8em 0;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.c-form2__fieldset label:first-child .c-form2__label_name{
+  margin-left: 0;
+}
+@media screen and (max-width: 400px){
+  .c-form2__fieldset .c-form2__label_name{
+    margin-left: 0;
+  }
+  .c-form2__fieldset label{
+    display: block;
+  }
+}
+
+.c-form2__separetor{
+  display: inline-block;
+  padding: 1em 0;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.c-form2__fieldset{
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.c-form2__table__line__cell_contents .c-form2__fieldset:last-child{
+  margin-bottom: 0;
+}
+
+.c-form2__input_text{
+  box-sizing: border-box;
+  padding: 0.8em;
+  margin-bottom: .5em;
+  background-color: #eee;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: border 0.2s ease-out;
+  color: inherit;
+  outline: 0;
+}
+
+.c-form2__input_text--50per{
+  width: 49%;
+}
+@media screen and (max-width: 400px){
+  .c-form2__input_text--50per{
+    width:100%;
+  }
+}
+
+.c-form2__input_text--name{
+  width: 30%;
+}
+@media screen and (max-width: 400px){
+  .c-form2__input_text--name{
+    width: auto;
+  }
+}
+
+.c-form2__button{
+  text-align: center;
+}
+
+.c-form2__select{
+  position: relative;
+  display: inline-block;
+  margin-bottom: .5em;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.c-form2__select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+
+  background: rgba(255, 255, 255, 0);
+  position: relative;
+  z-index: 1;
+  padding: 0.8em 3.2em 0.8em 0.8em;
+  line-height: 1.5;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.c-form2__select::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.6em;
+  z-index: 0;
+  display: block;
+  color: #808080;
+  text-align: center;
+  font-size: 0.5em;
+  line-height: 2.5;
+}
+@media screen and (max-width:400px){
+  .c-form2__select select{
+    width: 100%;
+  }
+  .c-form2__select::after {
+    padding: 1em 1.6em;
+  }
+}
+
+/* .c-form2 */
+.c-form2{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* .c-form2__table */
+.c-form2__table{
+  width: 100%;
+  margin-bottom: 3em;
+  border-bottom:1px solid;
+  border-color:#d9d9d9;
+}
+
+.c-form2__table__line{
+  display: table;
+  border-collapse: collapse;
+  background-color:rgb(247, 247, 247);
+  border: 1px solid;
+  border-bottom:none;
+  border-color:#d9d9d9;
+}
+@media screen and (max-width: 400px){
+  .c-form2__table__line{
+    display: block;
+    box-sizing:border-box;
+  }
+}
+
+.c-form2__table__line__cell_hw{
+  display: block;
+  width: 12em;
+  padding: 1.3em 1em;
+  line-height: 1.8;
+}
+@media screen and (max-width: 400px){
+  .c-form2__table__line__cell_hw{
+    padding: .5em 1em;
+  }
+}
+
+.c-form2__table__line__cell_contents{
+  display:table-cell;
+  width: 100%;
+  border-bottom:none;
+  background-color:#ffffff;
+  padding: .5em 1em .5em;
+}
+.c-form2__table__line__cell_contents>*:last-child{
+  margin-bottom: 0;
+}
+@media screen and (max-width: 400px){
+  .c-form2__table__line__cell_contents{
+    display: block;
+    width:auto;
+  }
+}

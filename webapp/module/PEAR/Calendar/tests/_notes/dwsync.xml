@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="all_tests.php" server="ftp.irohanipopeto.com" local="130898888411344758" remote="131176167600000000" />
+<file name="calendar_engine_tests.php" server="ftp.irohanipopeto.com" local="130898888411344758" remote="131176167600000000" />
+<file name="calendar_include.php" server="ftp.irohanipopeto.com" local="130898888411364759" remote="131176167600000000" />
+<file name="calendar_tabular_tests.php" server="ftp.irohanipopeto.com" local="130898888411364759" remote="131176167600000000" />
+<file name="calendar_test.php" server="ftp.irohanipopeto.com" local="130898888411364759" remote="131176167600000000" />
+<file name="calendar_tests.php" server="ftp.irohanipopeto.com" local="130898888411374759" remote="131176167600000000" />
+<file name="day_test.php" server="ftp.irohanipopeto.com" local="130898888411374759" remote="131176167600000000" />
+<file name="decorator_test.php" server="ftp.irohanipopeto.com" local="130898888411384760" remote="131176167600000000" />
+<file name="decorator_tests.php" server="ftp.irohanipopeto.com" local="130898888411384760" remote="131176167600000000" />
+<file name="decorator_textual_test.php" server="ftp.irohanipopeto.com" local="130898888411384760" remote="131176167600000000" />
+<file name="decorator_uri_test.php" server="ftp.irohanipopeto.com" local="130898888411394760" remote="131176167600000000" />
+<file name="helper_test.php" server="ftp.irohanipopeto.com" local="130898888411394760" remote="131176167600000000" />
+<file name="hour_test.php" server="ftp.irohanipopeto.com" local="130898888411404761" remote="131176167600000000" />
+<file name="minute_test.php" server="ftp.irohanipopeto.com" local="130898888411404761" remote="131176167600000000" />
+<file name="month_test.php" server="ftp.irohanipopeto.com" local="130898888411414762" remote="131176167600000000" />
+<file name="month_weekdays_test.php" server="ftp.irohanipopeto.com" local="130898888411414762" remote="131176167600000000" />
+<file name="month_weeks_test.php" server="ftp.irohanipopeto.com" local="130898888411414762" remote="131176167600000000" />
+<file name="peardate_engine_test.php" server="ftp.irohanipopeto.com" local="130898888411434763" remote="131176167600000000" />
+<file name="README" server="ftp.irohanipopeto.com" local="130898888411334757" remote="131176167600000000" />
+<file name="second_test.php" server="ftp.irohanipopeto.com" local="130898888411444763" remote="131176167600000000" />
+<file name="simple_include.php" server="ftp.irohanipopeto.com" local="130898888411444763" remote="131176167600000000" />
+<file name="table_helper_tests.php" server="ftp.irohanipopeto.com" local="130898888411454764" remote="131176167600000000" />
+<file name="unixts_engine_test.php" server="ftp.irohanipopeto.com" local="130898888411454764" remote="131176167600000000" />
+<file name="util_tests.php" server="ftp.irohanipopeto.com" local="130898888411474765" remote="131176167600000000" />
+<file name="util_textual_test.php" server="ftp.irohanipopeto.com" local="130898888411474765" remote="131176167600000000" />
+<file name="util_uri_test.php" server="ftp.irohanipopeto.com" local="130898888411484766" remote="131176167600000000" />
+<file name="validator_error_test.php" server="ftp.irohanipopeto.com" local="130898888411484766" remote="131176167600000000" />
+<file name="validator_tests.php" server="ftp.irohanipopeto.com" local="130898888411494766" remote="131176167600000000" />
+<file name="validator_unit_test.php" server="ftp.irohanipopeto.com" local="130898888411494766" remote="131176167600000000" />
+<file name="week_firstday_0_test.php" server="ftp.irohanipopeto.com" local="130898888411494766" remote="131176167600000000" />
+<file name="week_test.php" server="ftp.irohanipopeto.com" local="130898888411504767" remote="131176167600000000" />
+<file name="year_test.php" server="ftp.irohanipopeto.com" local="130898888411514767" remote="131176167600000000" />
+</dwsync>

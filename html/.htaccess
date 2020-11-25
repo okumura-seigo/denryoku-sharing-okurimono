@@ -11,18 +11,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 ##########################################
 
 RewriteEngine on
-RewriteRule ^(?!.*(\.|executor)).*$ app/bootstrap.php?%{QUERY_STRING}
-
-RewriteEngine on
-RewriteRule ^css/(.*)$ templates/css/$1
-RewriteRule ^js/(.*)$ templates/js/$1
-RewriteRule ^images/(.*)$ templates/images/$1
-RewriteRule ^fonts/(.*)$ templates/fonts/$1
-RewriteRule ^s/(.*)$ templates/s/$1
-
-RewriteEngine on
-RewriteRule ^templates/(?!.*(css|js|images|fonts|s)).*$ - [F,L]
-RewriteRule ^sources/.*$ - [F,L]
+RewriteRule ^(?!.*(executor)).*$ app/bootstrap.php?%{QUERY_STRING}
 
 
 # SEOŠÖ˜A

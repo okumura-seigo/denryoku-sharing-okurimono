@@ -29,7 +29,7 @@ if (strpos($bootHtmlFile, '.') !== false && substr($bootHtmlFile, (strlen($bootH
 	if (array_search($filePathInfo['extension'], $FILE_EXTENSION_CODE) !== false) {
 		$mime = array_search($filePathInfo['extension'], $FILE_EXTENSION_CODE);
 		header('Content-Type: '.$mime);
-		require_once BOOT_HTML_DIR.BOOT_HTML_FILE;
+		echo file_get_contents(BOOT_HTML_DIR.BOOT_HTML_FILE);
 		exit;
 	}
 	header("HTTP/1.0 404 Not Found");

@@ -19,10 +19,10 @@ if (is_numeric($_SESSION['loginUserId'])) {
 	$infoLoginUser = $objDB->findByIdData('user', $_SESSION['loginUserId']);
 	if (!is_numeric($infoLoginUser['user_id'])) {
 		session_destroy();
-		redirectUrl(HOME_URL.'user/login');
+		redirectUrl(HOME_URL.'sign-in/');
 	}
 } else {
 	session_destroy();
-	redirectUrl(HOME_URL.'user/login');
+	redirectUrl(HOME_URL.'sign-in/');
 }
 

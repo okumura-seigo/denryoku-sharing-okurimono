@@ -942,7 +942,8 @@ mark {
     padding: 0.8em;
     width: 100%;
     text-align: center;
-    transition: background-color 0.2s ease-out, transform 0.2s ease-out, border-bottom 0.2s ease-out;
+    transition: background-color 0.2s ease-out, transform 0.2s ease-out,
+ border-bottom 0.2s ease-out;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1056,7 +1057,8 @@ mark {
   font-weight: bold;
   padding: 0.8em;
   text-align: center;
-  transition: background-color 0.2s ease-out, transform 0.2s ease-out, border-bottom 0.2s ease-out;
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out,
+ border-bottom 0.2s ease-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1652,3 +1654,41 @@ mark {
 
 .u-w100em {
   width: 100em; }
+
+*11/26追加*
+.txt_box {
+	width: 100%;
+	height: auto;
+	border: 2px solid #ccc;
+	margin: 10px;
+}
+.mail_img {
+	width: 30%;
+}
+.trade_btn {
+	width: 100%;
+	height: auto;
+	display: flex;
+  justify-content: center;
+	margin-top: 1.6em;
+}
+.c-button2 {
+  cursor: pointer;
+  background: #689f38;
+  border: solid #698a4e;
+  border-width: 0 0 4px 0;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  padding: 0.8em;
+  text-align: center;
+  line-height: 1.5;
+  width: 20%;
+  margin: 0px 20px 0px 5px; }
+  @media screen and (max-width: 960px) {
+    .c-button {
+      width: 100%; } }
+.c-button2 a {
+	color: #fff;
+}

@@ -32,5 +32,6 @@ return array(
 	"28" => array("param_column" => "stop_flg", "param_type" => "1"),
 	"29" => array("param_column" => "delete_flg", "param_type" => "1"),
 	"30" => array("param_column" => "point", "param_type" => "1"),
+	"31" => array("param_column" => "buyer_user_id", "param_type" => "4"),
 );
 }

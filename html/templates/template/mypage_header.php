@@ -7,7 +7,7 @@
       <li class="l-global-nav__item">
         <a href="<?php echo h(HOME_URL) ?>about/" class="l-global-nav__link">
           <i class="fas fa-angle-right"></i>
-          会員プログラムとは
+          電力シェアリング会員プログラムとは
         </a>
       </li>
       <li class="l-global-nav__item">

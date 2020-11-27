@@ -20,5 +20,6 @@ return array(
 	"16" => array("param_column" => "file3", "param_type" => "4"),
 	"17" => array("param_column" => "atext", "param_type" => "6"),
 	"18" => array("param_column" => "place", "param_type" => "6"),
+	"19" => array("param_column" => "generator_ids", "param_type" => "4"),
 );
 }

@@ -71,10 +71,6 @@
               <td><?php echo h($infoProject['project_name']) ?></td>
             </tr>
             <tr>
-              <th>場所</th>
-              <td><?php echo nl2br(h($infoProject['place'])) ?></td>
-            </tr>
-            <tr>
               <th>概要</th>
               <td><?php echo nl2br(h($infoProject['project_contents'])) ?></td>
             </tr>
@@ -105,7 +101,10 @@
               <td><?php echo nl2br(h($infoProject['atext'])) ?></td>
             </tr>
           </table>
-          <a href="./index" style="color: white;"><button class="c-form__button" type="submit">戻る</button></a>
+<?php if ($infoProject['generator_ids']) { ?>
+          <a href="../trade/?project=<?php echo rawurlencode($infoProject['project_id']) ?>" style="color: white;"><button class="c-form__button" type="submit" style="margin-bottom:30px;">電力利用量を確認する</button></a>
+<?php } ?>
+          <a href="./" style="color: white;"><button class="c-form__button" type="submit">戻る</button></a>
         </div>
       </section>
     </main>

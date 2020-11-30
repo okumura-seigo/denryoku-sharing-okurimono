@@ -1299,3 +1299,8 @@ h3.c-hw--h3 {
 	margin-bottom: 1.6em;
 }
 
+.addresstext {
+  width: 450px;
+  height: 30px;
+}
+

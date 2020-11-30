@@ -15,7 +15,7 @@ $REGIST_FORM = array(
 $REGIST_CONFIRM = array(
 );
 $REGIST_EXECUTE = array(
-	"" => "",
+//	"13" => "13/add03.php",
 );
 // 管理画面編集変更
 $CHANGE_FORM = array(
@@ -43,7 +43,7 @@ $CSVUP_EXECUTE = array(
 	"" => "",
 );
 $CSVDOWN_EXECUTE = array(
-	"" => "",
+	"22" => "22/csvdown.php",
 );
 
 // 設定

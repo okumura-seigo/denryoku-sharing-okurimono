@@ -3,12 +3,12 @@
 $contact_data = $_POST;
 
 // メール内容読み込み
-require_once WEB_APP.'mail/contact/admin_mail.php';;
-require_once WEB_APP.'mail/contact/customer_mail.php';;
+require_once WEB_APP.'user.php';
+require_once WEB_APP.'mail/contact/admin_mail.php';
+require_once WEB_APP.'mail/contact/customer_mail.php';
 
 if (!$contact_data['title']) $errMsg[] = "お問い合わせ件名が入力されておりません";
 if (!$contact_data['content']) $errMsg[] = "お問い合わせ内容が入力されておりません";
-if (!$contact_data['checkbox']) $errMsg[] = "プライバシーポリシーに同意してください";
 if (count($errMsg) == 0) {
 
 	mb_language("Japanese");
@@ -19,12 +19,13 @@ if (count($errMsg) == 0) {
 	}else{
 		$errMsg[] = "メールの送信に失敗しました。お手数ですが再度お試しください。";
 		require_once BOOT_PHP_DIR.'mypage/contact/index.php';
+		require_once BOOT_HTML_DIR.'mypage/contact/index.html';
 		exit;
 	};
 
 }else{
-
 	require_once BOOT_PHP_DIR.'mypage/contact/index.php';
+	require_once BOOT_HTML_DIR.'mypage/contact/index.html';
 	exit;
 	
 }

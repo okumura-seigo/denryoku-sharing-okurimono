@@ -3,7 +3,8 @@
 # パラメータ設定
 $arrParam = array(
 	"user_id" => "ID",
-	"point_division_id" => "内容",
+	"point_division_id" => "ポイント区分",
+	"atext" => "メッセージ",
 	"point" => "ポイント",
 );
 // 管理画面文字エンコード

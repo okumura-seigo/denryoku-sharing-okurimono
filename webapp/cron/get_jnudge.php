@@ -1,5 +1,8 @@
 <?php
 
+// 取得日時
+$executionDatetime = date("Y-m-d H:i:s", strtotime("-30 minute"));
+
 # API接続先
 define('API_JNUDGE_URI', 'https://jnudge.org/api/v1');
 define('API_JNUDGE_KEY', 'ha18PVQrOAIcOa66U9aoD9obS5eOkdgd');
@@ -44,16 +47,14 @@ foreach ($resUser as $user) {
 		curl_close($conn); 
 
 		$tradeArray = json_decode($res, true);
-
+		
 		// 取得処理
 		foreach ($tradeArray['result']['executions'] as $execution) {
-			if ($execution['status'] == "4") {
-				$infoData = $objDB->findData('trade', array("where" => array("execution_id = ?"), "param" => array($execution['execution_id'])));
-				if (count($infoData) == 0) {
-					$execution['user_id'] = $user['user_id'];
-					$execution['generator_id'] = $generator['generator_id'];
-					$objDB->insertData('trade', $execution);
-				}
+			if ($execution['status'] == "2") {
+				$execution['user_id'] = $user['user_id'];
+				$execution['generator_id'] = $generator['generator_id'];
+				$execution['execution_datetime'] = $executionDatetime;
+				$objDB->insertData('trade', $execution);
 			}
 		}
 	}

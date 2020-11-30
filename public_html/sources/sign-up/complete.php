@@ -34,7 +34,28 @@ if ($result == false) {
 mb_language("Japanese");
 mb_internal_encoding("UTF-8");
 
-mb_send_mail($requestData['email'],"電力シェアリング会員登録完了のお知らせ","電力シェアリング会員登録が完了しました");
+mb_send_mail($requestData['email'], "電力シェアリング会員登録完了のお知らせ", trim('
+'.$requestData['name1'].' '.$requestData['name2'].' 様
+
+この度は電力シェアリング会員プログラムにご登録いただき、誠にありがとうございます。
+会員登録が完了しました。ご登録内容の確認をお願いいたします。
+
+【ご登録情報】
+　メールアドレス： '.$requestData['email'].'
+　パ ス ワ ー ド： ご登録されたパスワード
+
+マイページへのログインはこちらから
+https://www.dsmp.jp/
+
+今後とも電力シェアリング会員プログラムをよろしくお願いいたします。
+
+※本メールは送信専用アドレスから送信されております。
+本メールに返信いただきましても回答できませんのでご了承ください。
+お問い合わせはこちらからお願いいたします。
+https://www.dsmp.jp/contact/
+
+電力シェアリング会員プログラム
+'));
 
 // ログイン情報保持
 $_SESSION['loginUserId'] = $objDB->lastInsertId("user");

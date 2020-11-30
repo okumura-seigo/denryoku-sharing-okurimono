@@ -42,7 +42,7 @@
       <section class="l-contents__section">
         <div class="l-contents__inner">
           <h2 class="c-title__page">ポイント履歴</h2>
-          <h3 class="c-title__m">現在の所有ポイント</h3>
+          <h3 class="c-title__m">現在の保有ポイント</h3>
           <div class="p-mypage__point">
             <span><?php echo h($infoLoginUser['point']) ?></span>ポイント
           </div>
@@ -50,6 +50,7 @@
           <table class="c-table">
             <tr>
               <th class="u-w8em">日付</th>
+              <th>カテゴリ</th>
               <th>内容</th>
               <th class="u-w8em">ポイント</th>
             </tr>
@@ -57,6 +58,7 @@
                 <tr>
                   <td class="u-center" style="width:20%;"><?php echo h(substr($val['insert_datetime'], 0, -9)) ?></td>
                   <td><?php echo h($val['point_division_atext']) ?></td>
+                  <td><?php echo h($val['atext']) ?></td>
                   <td class="u-center"><?php echo h($val['point']) ?></td>
                 </tr>
 <?php } ?>

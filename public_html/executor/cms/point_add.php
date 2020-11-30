@@ -3,7 +3,8 @@
 # パラメータ設定
 $arrParam = array(
 	"user_id" => "ID",
-	"point_division_id" => "内容",
+	"point_division_id" => "ポイント区分",
+	"atext" => "メッセージ",
 	"point" => "ポイント",
 );
 // 管理画面文字エンコード
@@ -137,6 +138,11 @@ extract($requestData);
 <?php } ?>
 	</select>
     </td>
+  </tr>
+  <tr>
+    <th>メッセージ</th>
+    <td>
+    	<input type="text" name="atext" value="<?php echo h($atext) ?>" size="40" id="">    </td>
   </tr>
   <tr>
     <th>付与ポイント数</th>

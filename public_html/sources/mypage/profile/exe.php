@@ -40,8 +40,9 @@ $requestData = getRequestData($arrParam);
 
 // エラーチェック
 $errMsg = actionValidate("user_edit_val", $requestData, $arrParam);
+
 if (count($errMsg) == 0) {
-  $requestData['birthday'] = $requestData['birthday_y']."-".$requestData['birthday_m']."-".$requestData['birthday_d'];
+	$requestData['birthday'] = $requestData['birthday_y']."-".$requestData['birthday_m']."-".$requestData['birthday_d'];
 	$objDB->updateData('user', $requestData, $infoLoginUser['user_id']);
 	redirectUrl("exe");
 }

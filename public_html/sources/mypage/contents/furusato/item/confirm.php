@@ -12,6 +12,7 @@ require_once WEB_APP."user.php";
 // データ取得
 $requestData = getRequestData($arrParam);
 if (!is_numeric($requestData['item_id'])) exit;
+if (empty($requestData['address'])) header("Location: ".$_SERVER['HTTP_REFERER']);
 
 // 名産品取得
 $infoItem = $objDB->findByIdData('item', $requestData['item_id']);

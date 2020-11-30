@@ -74,17 +74,6 @@
                 </tr>
                 <tr>
                   <td colspan="2">
-                    <p><a href="<?php echo h(HOME_URL) ?>privacy-policy/">プライバシーポリシー</a>に同意いただける場合は「同意する」にチェックを入れ、「送信する」をクリックしてください。</p>
-                    <div class="u-mt1em u-center">
-                      <div class="c-form__checkbox">
-                        <input type="checkbox" id="checkbox1" name="checkbox" value="1" <?php if($contact_data['checkbox'] == "1") "checked"?>>
-                        <label for="checkbox1">同意する</label>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">
                     <input type="hidden" name="name" value="<?php echo h($name) ?>" >
                     <input type="hidden" name="email" value="<?php echo h($email) ?>" >
                     <button class="c-form__button" type="submit">送信する</button>

@@ -6,9 +6,6 @@ $arrParam = array(
 	"address" => "送付先住所",
 );
 
-// メール内容読み込み
-//require_once WEB_APP.'mail/furusato/customer_mail.php';
-
 // ライブラリ読み込み
 require_once WEB_APP."user.php";
 
@@ -36,6 +33,24 @@ if (count($infoExchange) == 0) {
 	$requestData["state"] = 0;
 	$objDB->insertData('exchange', $requestData);
 }
+
+// メール内容読み込み
+$contact_data['item_name'] = $infoItem['name'];
+$contact_data['generator_name'] = $infoGenerator['name'];
+$contact_data['item_point'] = $infoItem['point'];
+$contact_data['name1'] = $infoLoginUser['name1'];
+$contact_data['name2'] = $infoLoginUser['name2'];
+$contact_data['post'] = $infoLoginUser['post'];
+$contact_data['pref'] = $infoLoginUser['pref'];
+$contact_data['address1'] = $infoLoginUser['address1'];
+$contact_data['address2'] = $infoLoginUser['address2'];
+$contact_data['address3'] = $infoLoginUser['address3'];
+$contact_data['tel'] = $infoLoginUser['tel1'];
+require_once WEB_APP.'mail/furusato/customer_mail.php';
+
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
+mb_send_mail($infoLoginUser['email'], $customer_title, $customer_content);
 
 // 出力設定
 extract($requestData);

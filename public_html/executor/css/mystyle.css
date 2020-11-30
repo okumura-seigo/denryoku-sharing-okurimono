@@ -1,0 +1,19 @@
+/* WRITE YOUR CSS CODE HERE */
+
+#search_area {
+margin:15px;
+}
+
+#search_box {
+margin:0px;
+}
+
+#search_box dt {
+float:left;
+width:100px;
+}
+
+#content table tr.deleted td {background-color:#777777;}
+#content table tr.stoped td {background-color:#AAAAAA;}
+
+

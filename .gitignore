@@ -1,0 +1,8 @@
+public_html/.htaccess
+public_html/app/bootstrap-config.inc.php
+public_html/templates/s/*
+webapp/config/const.inc.php
+webapp/config/cfg.inc.php
+webapp/file/session/*
+webapp/file/temp/*
+

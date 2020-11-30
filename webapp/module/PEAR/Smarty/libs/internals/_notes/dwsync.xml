@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="core.assemble_plugin_filepath.php" server="ftp.irohanipopeto.com" local="130898888417825128" remote="131176167600000000" />
+<file name="core.assign_smarty_interface.php" server="ftp.irohanipopeto.com" local="130898888417835129" remote="131176167600000000" />
+<file name="core.create_dir_structure.php" server="ftp.irohanipopeto.com" local="130898888417845129" remote="131176167600000000" />
+<file name="core.display_debug_console.php" server="ftp.irohanipopeto.com" local="130898888417845129" remote="131176167600000000" />
+<file name="core.get_include_path.php" server="ftp.irohanipopeto.com" local="130898888417855130" remote="131176167600000000" />
+<file name="core.get_microtime.php" server="ftp.irohanipopeto.com" local="130898888417855130" remote="131176167600000000" />
+<file name="core.get_php_resource.php" server="ftp.irohanipopeto.com" local="130898888417865130" remote="131176167600000000" />
+<file name="core.is_secure.php" server="ftp.irohanipopeto.com" local="130898888417875131" remote="131176167600000000" />
+<file name="core.is_trusted.php" server="ftp.irohanipopeto.com" local="130898888417875131" remote="131176167600000000" />
+<file name="core.load_plugins.php" server="ftp.irohanipopeto.com" local="130898888417875131" remote="131176167600000000" />
+<file name="core.load_resource_plugin.php" server="ftp.irohanipopeto.com" local="130898888417885132" remote="131176167600000000" />
+<file name="core.process_cached_inserts.php" server="ftp.irohanipopeto.com" local="130898888417885132" remote="131176167600000000" />
+<file name="core.process_compiled_include.php" server="ftp.irohanipopeto.com" local="130898888417895132" remote="131176167600000000" />
+<file name="core.read_cache_file.php" server="ftp.irohanipopeto.com" local="130898888417895132" remote="131176167600000000" />
+<file name="core.rmdir.php" server="ftp.irohanipopeto.com" local="130898888417905133" remote="131176167600000000" />
+<file name="core.rm_auto.php" server="ftp.irohanipopeto.com" local="130898888417905133" remote="131176167600000000" />
+<file name="core.run_insert_handler.php" server="ftp.irohanipopeto.com" local="130898888417915133" remote="131176167600000000" />
+<file name="core.smarty_include_php.php" server="ftp.irohanipopeto.com" local="130898888417915133" remote="131176167600000000" />
+<file name="core.write_cache_file.php" server="ftp.irohanipopeto.com" local="130898888417945135" remote="131176167600000000" />
+<file name="core.write_compiled_include.php" server="ftp.irohanipopeto.com" local="130898888417955136" remote="131176167600000000" />
+<file name="core.write_compiled_resource.php" server="ftp.irohanipopeto.com" local="130898888417955136" remote="131176167600000000" />
+<file name="core.write_file.php" server="ftp.irohanipopeto.com" local="130898888417965136" remote="131176167600000000" />
+</dwsync>

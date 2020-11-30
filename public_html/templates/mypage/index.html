@@ -42,7 +42,7 @@
           <div class="p-mypage__wrap">
             <div class="p-mypage__prof">
               <div class="p-mypage__prof-img">
-                <img src="../images/noimage.jpg" alt="">
+                <img src="<?php if ($infoLoginUser['image']) { ?><?php echo h(UPLOAD_FILE_URL.'user/'.$infoLoginUser['image']) ?><?php } else { ?>../images/noimage.jpg<?php } ?>" alt="">
               </div>
               <h3 class="p-mypage__point-title">現在の保有ポイント</h3>
               <div class="p-mypage__point">

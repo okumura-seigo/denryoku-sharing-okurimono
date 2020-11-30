@@ -30,6 +30,7 @@ $arrParam = array(
   "housing_form" => "住居形態"
 );
 // ライブラリ読み込み
+require_once WEB_APP."user.php";
 require_once WEB_APP."mypage.php";
 
 // データ取得
@@ -45,4 +46,3 @@ if (count($_POST) == 0) {
 
 // 出力設定
 extract($requestData);
-

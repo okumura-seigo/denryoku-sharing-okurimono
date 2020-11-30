@@ -1,4 +1,5 @@
 <?php
+
 # パラメータ設定
 $arrParam = array(
   "email" => "メールアドレス",
@@ -30,6 +31,7 @@ $arrParam = array(
 );
 
 // ライブラリ読み込み
+require_once WEB_APP."user.php";
 require_once WEB_APP."mypage.php";
 
 // データ取得
@@ -39,8 +41,9 @@ $user_datas = $requestData;
 // エラーチェック
 $errMsg = actionValidate("user_edit_val", $requestData, $arrParam);
 if (count($errMsg) > 0) {
-  require_once 'index.php';
-  exit;
+	require_once BOOT_PHP_DIR.'mypage/profile/index.php';
+	require_once BOOT_HTML_DIR.'mypage/profile/index.html';
+	exit;
 }
 
 // 出力設定

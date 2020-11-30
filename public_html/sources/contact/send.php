@@ -23,13 +23,15 @@ if (count($errMsg) == 0) {
 		header('Location:./complete');
 	}else{
 		$errMsg[] = "メールの送信に失敗しました。お手数ですが再度お試しください。";
-		require_once BOOT_PHP_DIR.'mypage/contact/index.php';
+		require_once BOOT_PHP_DIR.'contact/index.php';
+		require_once BOOT_HTML_DIR.'contact/index.html';
 		exit;
-	};
+	}
 
 }else{
 
 	require_once BOOT_PHP_DIR.'contact/index.php';
+	require_once BOOT_HTML_DIR.'contact/index.html';
 	exit;
 	
 }

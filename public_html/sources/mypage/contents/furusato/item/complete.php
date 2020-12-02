@@ -2,7 +2,7 @@
 
 # パラメータ設定
 $arrParam = array(
-	"item_id" => "ID",
+	"id" => "ID",
 	"address" => "送付先住所",
 );
 
@@ -17,7 +17,7 @@ $errMsg = actionValidate("address_val", $requestData, $arrParam);
 if (count($errMsg) == 0) {
 
 	// 名産品取得
-	$infoItem = $objDB->findByIdData('item', $requestData['item_id']);
+	$infoItem = $objDB->findByIdData('item', $requestData['id']);
 	if (!is_numeric($infoItem['item_id'])) exit;
 
 	// 発電者取得

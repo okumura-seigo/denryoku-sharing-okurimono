@@ -196,10 +196,10 @@ class MyPage {
 		}
 
 		if($limit_flg == 0) {
-			$query = 'SELECT * FROM message WHERE user_id = ? ORDER BY message_id DESC LIMIT 3';
+			$query = 'SELECT * FROM message WHERE user_id = ? And delete_flg = 0 ORDER BY message_id DESC LIMIT 3';
 			$data = $this->dbConnect($query, array($login_user_id));
 		} else {
-			$query = 'SELECT * FROM message WHERE user_id = ? ORDER BY message_id DESC LIMIT 5 OFFSET '.$offset;
+			$query = 'SELECT * FROM message WHERE user_id = ? And delete_flg = 0 ORDER BY message_id DESC LIMIT 5 OFFSET '.$offset;
 			$data = $this->dbConnect($query, array($login_user_id));
 		}
 
@@ -213,7 +213,7 @@ class MyPage {
 			return;
 		}
 
-		$query = 'SELECT * FROM message WHERE user_id = ? AND message_id = ?';
+		$query = 'SELECT * FROM message WHERE user_id = ? And delete_flg = 0 AND message_id = ?';
 		$data = $this->dbConnect($query, array($login_user_id, $message_id));
 
 		return $data[0];

@@ -47,7 +47,7 @@
 
           <h2 class="c-title__page">会員情報の照会・変更</h2>
 
-          <form action="conf" class="c-form2" method="post">
+          <form action="conf" class="c-form2" method="post" enctype="multipart/form-data">
 
             <h3 class="c-form2__hw">会員ID・パスワード</h3>
 
@@ -224,6 +224,13 @@
                   <input type="text" name="name" class="c-form2__input_text" required placeholder="" size="4" ><span class="c-form2__separetor">-</span>
                   <input type="text" name="name" class="c-form2__input_text" required placeholder="" size="4" >
 */ ?>
+                </div>
+              </div>
+
+              <div class="c-form2__table__line">
+                <div class="c-form2__table__line__cell_hw">プロフィール画像</div>
+                <div class="c-form2__table__line__cell_contents">
+                  <input type="file" class="c-form2__input_text" name="image"><br>※変更する場合のみ入力してください
                 </div>
               </div>
 

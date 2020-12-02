@@ -21,45 +21,26 @@ $requestData = getRequestData($arrParam);
 
 // エラーチェック
 $errMsg = actionValidate("user_regist_val", $requestData, $arrParam);
-if (count($errMsg) > 0) exit;
+if (count($errMsg) == 0){
 
-// DB操作
-$requestData['passwd'] = password_hash($requestData['passwd'], PASSWORD_DEFAULT);
-$result = $objDB->insertData("user", $requestData);
-if ($result == false) {
-	exit;
+  // DB操作
+  $requestData['passwd'] = password_hash($requestData['passwd'], PASSWORD_DEFAULT);
+  $result = $objDB->insertData("user", $requestData);
+  if ($result == false) {
+    exit;
+  }
+  
+  // メール送信
+  mb_language("Japanese");
+  mb_internal_encoding("UTF-8");
+  require_once WEB_APP.'mail/sign-up/customer_mail.php';
+  mb_send_mail($requestData['email'], $customer_title, $customer_content, ADM_MAILER, ADM_MAIL);
+  redirectURL('complete');
+  
+  // ログイン情報保持
+  $_SESSION['loginUserId'] = $objDB->lastInsertId("user");
+  
 }
 
-// メール送信
-mb_language("Japanese");
-mb_internal_encoding("UTF-8");
-
-mb_send_mail($requestData['email'], "電力シェアリング会員登録完了のお知らせ", trim('
-'.$requestData['name1'].' '.$requestData['name2'].' 様
-
-この度は電力シェアリング会員プログラムにご登録いただき、誠にありがとうございます。
-会員登録が完了しました。ご登録内容の確認をお願いいたします。
-
-【ご登録情報】
-　メールアドレス： '.$requestData['email'].'
-　パ ス ワ ー ド： ご登録されたパスワード
-
-マイページへのログインはこちらから
-https://www.dsmp.jp/
-
-今後とも電力シェアリング会員プログラムをよろしくお願いいたします。
-
-※本メールは送信専用アドレスから送信されております。
-本メールに返信いただきましても回答できませんのでご了承ください。
-お問い合わせはこちらからお願いいたします。
-https://www.dsmp.jp/contact/
-
-電力シェアリング会員プログラム
-'));
-
-// ログイン情報保持
-$_SESSION['loginUserId'] = $objDB->lastInsertId("user");
-
-// 出力設定
-extract($requestData);
-
+  // 出力設定
+  extract($requestData);

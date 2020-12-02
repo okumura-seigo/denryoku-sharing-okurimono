@@ -27,7 +27,8 @@ $arrParam = array(
   "private_car" => "自家用車",
   "car_license" => "自動車運転免許",
   "householde_income" => "世帯年収（税込）",
-  "housing_form" => "住居形態"
+  "housing_form" => "住居形態",
+  "image" => "プロフィール画像",
 );
 
 // ライブラリ読み込み
@@ -42,6 +43,12 @@ $requestData = getRequestData($arrParam);
 $errMsg = actionValidate("user_edit_val", $requestData, $arrParam);
 
 if (count($errMsg) == 0) {
+	if ($requestData['image']) {
+		// 画像
+		copy(UPLOAD_FILE_TEMP_DIR.$requestData['image'], UPLOAD_FILE_DIR.'user/'.$requestData['image']);
+	} else {
+		unset($requestData['image']);
+	}
 	$requestData['birthday'] = $requestData['birthday_y']."-".$requestData['birthday_m']."-".$requestData['birthday_d'];
 	$objDB->updateData('user', $requestData, $infoLoginUser['user_id']);
 	redirectUrl("exe");

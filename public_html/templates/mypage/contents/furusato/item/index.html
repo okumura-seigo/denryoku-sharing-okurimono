@@ -101,10 +101,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="c-itemPoint">必要ポイント <em><?php echo h($infoItem['point']) ?>P</em></div>
 					<form action="confirm" method="POST" name="confirm" id="confirm">
 					<p>送付先住所<br>
-						<input type="text" name="address" value="<?php echo h($address) ?>" required="required" class="addresstext"><br>
+						<input type="text" name="address" placeholder="<?php if(count($errMsg) > 0) echo h($errMsg[0]) ?>" value="<?php echo h($address) ?>" required="required" class="addresstext"><br>
 						<span style="color:#FF0000">※入力された住所へ発送します。<br>　正しい住所を入力してください。</span></p>
-					<input type="hidden" name="item_id" value="<?php echo h($infoItem['item_id']) ?>">
-					<div class="c-btnCommon"><?php if ($infoLoginUser['point'] >= $infoItem['point']) { ?><a href="#" onclick="document:confirm.submit()";return(false)>選択する</a><?php } else { ?><p style="color:#FF0000">現在のポイントは<?php echo h($infoLoginUser['point']) ?>ptです。</p><?php } ?></div>
+					<input type="hidden" name="id" value="<?php echo h($infoItem['item_id']) ?>">
+					<div class="c-btnCommon"><?php if (!$infoLoginUser['point'] >= $infoItem['point']) { ?><a href="#" onclick="document:confirm.submit()";return(false)>選択する</a><?php } else { ?><p style="color:#FF0000">現在のポイントは<?php echo h($infoLoginUser['point']) ?>ptです。</p><?php } ?></div>
 					</form>
 				</div>
 			</div><!-- /.p-imageColumn -->
@@ -120,6 +120,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="p-imageColumn__contents">
 
+					<table border="1">
+						<tbody>
+							<tr>
+								<th style="width:20%;">生産地</th>
+								<td><?php echo h($infoItem['place']) ?></td>
+							</tr>
+							<tr>
+								<th>名産品生産者</th>
+								<td><?php echo h($infoItem['producer']) ?></td>
+							</tr>
+<?php if ($infoItem['free1_atext']) { ?>
+							<tr>
+								<th><?php echo h($infoItem['free1_title']) ?></th>
+								<td><?php echo nl2br(h($infoItem['free1_atext'])) ?></td>
+							</tr>
+<?php } ?>
+<?php if ($infoItem['free2_atext']) { ?>
+							<tr>
+								<th><?php echo h($infoItem['free2_title']) ?></th>
+								<td><?php echo nl2br(h($infoItem['free2_atext'])) ?></td>
+							</tr>
+<?php } ?>
+						</tbody>
+					</table>
+
+				</div>
+			</div><!-- /.p-imageColumn -->
+
+				<div>
 					<table border="1">
 						<tbody>
 							<tr>
@@ -148,10 +177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php } ?>
 						</tbody>
 					</table>
-
-				</div>
-			</div><!-- /.p-imageColumn -->
-
+			</div>
 		</div><!-- /.p-articleWrap -->
 
 	</div><!-- /.l-container__inner -->

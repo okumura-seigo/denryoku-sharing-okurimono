@@ -124,6 +124,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<tbody>
 							<tr>
 								<th style="width:20%;">生産地</th>
+								<td><?php echo h($infoItem['place']) ?></td>
+							</tr>
+							<tr>
+								<th>名産品生産者</th>
+								<td><?php echo h($infoItem['producer']) ?></td>
+							</tr>
+<?php if ($infoItem['free1_atext']) { ?>
+							<tr>
+								<th><?php echo h($infoItem['free1_title']) ?></th>
+								<td><?php echo nl2br(h($infoItem['free1_atext'])) ?></td>
+							</tr>
+<?php } ?>
+<?php if ($infoItem['free2_atext']) { ?>
+							<tr>
+								<th><?php echo h($infoItem['free2_title']) ?></th>
+								<td><?php echo nl2br(h($infoItem['free2_atext'])) ?></td>
+							</tr>
+<?php } ?>
+						</tbody>
+					</table>
+
+				</div>
+			</div><!-- /.p-imageColumn -->
+
+				<div>
+					<table border="1">
+						<tbody>
+							<tr>
+								<th style="width:20%;">生産地</th>
 								<td><?php echo h($infoGenerator['place']) ?></td>
 							</tr>
 							<tr>
@@ -148,10 +177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php } ?>
 						</tbody>
 					</table>
-
-				</div>
-			</div><!-- /.p-imageColumn -->
-
+			</div>
 		</div><!-- /.p-articleWrap -->
 
 	</div><!-- /.l-container__inner -->

@@ -104,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<input type="text" name="address" placeholder="<?php if(count($errMsg) > 0) echo h($errMsg[0]) ?>" value="<?php echo h($address) ?>" required="required" class="addresstext"><br>
 						<span style="color:#FF0000">※入力された住所へ発送します。<br>　正しい住所を入力してください。</span></p>
 					<input type="hidden" name="id" value="<?php echo h($infoItem['item_id']) ?>">
-					<div class="c-btnCommon"><?php if (!$infoLoginUser['point'] >= $infoItem['point']) { ?><a href="#" onclick="document:confirm.submit()";return(false)>選択する</a><?php } else { ?><p style="color:#FF0000">現在のポイントは<?php echo h($infoLoginUser['point']) ?>ptです。</p><?php } ?></div>
+					<div class="c-btnCommon"><?php if ($infoLoginUser['point'] >= $infoItem['point']) { ?><a href="#" onclick="document:confirm.submit()";return(false)>選択する</a><?php } else { ?><p style="color:#FF0000">現在のポイントは<?php echo h($infoLoginUser['point']) ?>ptです。</p><?php } ?></div>
 					</form>
 				</div>
 			</div><!-- /.p-imageColumn -->

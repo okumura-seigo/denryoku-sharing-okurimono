@@ -16,7 +16,7 @@ $customer_content ='
 
 お届け先情報
 お名前：'.$contact_data['name1'].' '.$contact_data['name2'].'
-ご住所：〒'.$contact_data['post'].'  '.$contact_data['pref'].''.$contact_data['address1'].''.$contact_data['address2'].''.$contact_data['address3'].'
+ご住所：'.$contact_data['pref'].'
 お電話番号：'.$contact_data['tel'].'
 
 ---------

@@ -27,8 +27,7 @@ $arrParam = array(
   "private_car" => "自家用車",
   "car_license" => "自動車運転免許",
   "householde_income" => "世帯年収（税込）",
-  "housing_form" => "住居形態",
-  "image" => "プロフィール画像",
+  "housing_form" => "住居形態"
 );
 
 // ライブラリ読み込み
@@ -45,20 +44,6 @@ if (count($errMsg) > 0) {
 	require_once BOOT_PHP_DIR.'mypage/profile/index.php';
 	require_once BOOT_HTML_DIR.'mypage/profile/index.html';
 	exit;
-}
-
-// 画像アップロード
-if ($_FILES['image']['tmp_name']) {
-	function getExpArray($filename) {
-		$exp = explode(".", $filename);
-		$last = $exp[(count($exp) - 1)];
-		unset($exp[(count($exp) - 1)]);
-		return array(implode(".", $exp), $last);
-	}
-
-	$fileName = getExpArray($_FILES['image']['name']);
-	$requestData['image'] = digitNum($infoLoginUser['user_id'], 6).md5(serialize($requestData)).".".$fileName[1];
-	uploadImageMagick($_FILES['image']['tmp_name'], UPLOAD_FILE_TEMP_DIR.$requestData['image'], IMAGE_HEIGHT, IMAGE_WIDTH);
 }
 
 // 出力設定

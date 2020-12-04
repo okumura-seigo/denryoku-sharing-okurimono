@@ -27,8 +27,7 @@ $arrParam = array(
   "private_car" => "自家用車",
   "car_license" => "自動車運転免許",
   "householde_income" => "世帯年収（税込）",
-  "housing_form" => "住居形態",
-  "image" => "プロフィール画像",
+  "housing_form" => "住居形態"
 );
 // ライブラリ読み込み
 require_once WEB_APP."user.php";

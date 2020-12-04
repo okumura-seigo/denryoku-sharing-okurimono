@@ -15,8 +15,7 @@ $requestData = getRequestData($arrParam);
 // エラーチェック
 $errMsg = actionValidate("user_password_val", $requestData, $arrParam);
 if (count($errMsg) > 0) {
-	require_once BOOT_PHP_DIR.'mypage/profile/password.php';
-	require_once BOOT_HTML_DIR.'mypage/profile/password.html';
+	require_once 'password.php';
 	exit;
 }
 

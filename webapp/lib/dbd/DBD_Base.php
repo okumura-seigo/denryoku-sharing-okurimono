@@ -402,7 +402,7 @@ class DBD_Base extends DBD_Structure {
 					if (is_numeric($requestData[$val])) {
 						$updateArray[$head.$val] = $requestData[$val];
 					} elseif ($requestData[$val] == "") {
-						$updateArray[$head.$val] = 0;
+						$updateArray[$head.$val] = null;
 					} else {
 						return false;
 					}
@@ -422,7 +422,7 @@ class DBD_Base extends DBD_Structure {
 					if (is_array($requestData[$val])) {
 						$updateArray[$head.$val] = serialize($requestData[$val]);
 					} elseif (!is_array($requestData[$val]) && $requestData[$val] == "") {
-						$updateArray[$head.$val] = "";
+						$updateArray[$head.$val] = null;
 					} else {
 						return false;
 					}
@@ -434,7 +434,7 @@ class DBD_Base extends DBD_Structure {
 					if (checkData($requestData[$val], "timestampE") || $requestData[$val] == "0000-00-00 00:00:00") {
 						$updateArray[$head.$val] = $requestData[$val];
 					} elseif ($requestData[$val] == "") {
-						$updateArray[$head.$val] = "0000-00-00 00:00:00";
+						$updateArray[$head.$val] = null;
 					} else {
 						return false;
 					}
@@ -443,8 +443,8 @@ class DBD_Base extends DBD_Structure {
 				if (isset($requestData[$val])) {
 					if (checkData($requestData[$val], "date") || $requestData[$val] == "0000-00-00") {
 						$updateArray[$head.$val] = $requestData[$val];
-					} elseif (str_replace("-", "", $requestData[$val]) == "") {
-						$updateArray[$head.$val] = "0000-00-00";
+					} elseif ($requestData[$val] == "") {
+						$updateArray[$head.$val] = null;
 					} else {
 						return false;
 					}

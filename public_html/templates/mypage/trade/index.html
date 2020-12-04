@@ -51,9 +51,9 @@
 <?php foreach ($resTradeDetail as $key => $val) { ?>
                 <tr>
                   <td><?php echo h($key) ?></td>
-                  <td><?php echo h(number_format($val['execution_amount'] * 0.000406)) ?></td>
-                  <td><?php echo h(number_format($val['transaction_amount'] * 0.000406, 3)) ?></td>
-                  <td><?php echo h(number_format($val['transaction_amount'] * 10 * 0.000406, 3)) ?></td>
+                  <td><?php echo h(number_format($val['execution_amount'])) ?></td>
+                  <td><?php echo h(number_format($val['execution_amount_total'] * 0.000406, 3)) ?></td>
+                  <td><?php echo h(number_format($val['execution_amount_total'] * 10 * 0.000406, 3)) ?></td>
                 </tr>
 <?php } ?>
           </table>

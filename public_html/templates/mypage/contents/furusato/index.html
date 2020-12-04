@@ -75,7 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header id="l-header">
 	<div id="l-header__inner">
-		<h1 id="l-header__logo"><em>ふるさと</em>からの<em>贈り物</em></h1>
+		<h1 id="l-header__logo"><a href="./" style="color:#333; text-decoration:none;"><em>ふるさと</em>からの<em>贈り物</em></a></h1>
 		<div id="l-header__linkMypage"><a href="../../">マイページ</a></div>
 	</div>
 </header><!-- /#l-header -->
@@ -86,17 +86,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="p-ctaBgVisual">
 
 	<div class="p-ctaBgVisual__copy">
-		環境にやさしい電力を使って<br class="p-ctaBgVisual__copy__br">地域名産品を楽しもう
+		2050年、CO2ニュートラルへ<br>環境にやさしい電力を使って<br class="p-ctaBgVisual__copy__br">地域名産品を楽しもう
 	</div>
 
 	<div class="c-btnSearch"><a href="#p-listItems">名産品を探す</a></div>
-
 </div><!-- /.p-ctaBgVisual -->
 
 
-<div class="l-container">
+<div class="l-container" style="padding-top:0;">
 
 	<div class="l-container__inner">
+		<div style="padding-bottom:80px; font-size:12px;">
+			<a href="../../">マイページ</a> &gt; ふるさとからの贈り物
+		</div>
 
 		<h2 class="c-hw c-hw--h2About"><em>ふるさと</em>からの<em>贈り物</em>とは？</h2>
 
@@ -207,10 +209,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="p-listItems__unit__image"><img src="<?php echo h(UPLOAD_FILE_URL.$val['image']) ?>" alt="<?php echo h($val['name']) ?>"></div>
 
 		<div class="p-listItems__unit__contents">
-			<div class="p-listItems__unit__name"><?php echo h($val['name']) ?></div>
+			<div class="p-listItems__unit__name" style="font-size:2.3rem;"><?php echo h($val['name']) ?></div>
 			<div class="p-listItems__unit__subname"><?php echo h($val['place']) ?></div>
 			<div class="p-listItems__unit__thumbBox">
-				<div class="p-listItems__unit__thumbBox__thumb"><img src="<?php echo h(UPLOAD_FILE_URL.$val['generator_image1']) ?>" alt="<?php echo h($val['generator_name']) ?>"></div>
+				<div class="p-listItems__unit__thumbBox__thumb"><img src="<?php echo h(UPLOAD_FILE_URL.$val['producer_image']) ?>" alt="<?php echo h($val['producer']) ?>"></div>
 				<div class="p-listItems__unit__thumbBox__text"><?php echo h($val['generator_name']) ?></div>
 			</div>
 		</div>
